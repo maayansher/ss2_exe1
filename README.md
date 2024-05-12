@@ -41,9 +41,13 @@ To clean compiled files, run the command:
   ```
 ## File included
 `Graph.cpp` and `Graph.hpp` - implementation file and header file for graph data structure.
+
 `Algorithms.cpp` and `Algorithms.hpp` - implementation file and header file for graph algorithms.
+
 `main.cpp` - main file to show the cases of implmented algorithms.
+
 `Test.cpp` - inside the test file we are checking different cases of each graph to show correctness and to detect fails. 
+
 `TestCounter.cpp` - the TestCounter checks if we implemented at lease 20 tests.
 
 ## Functions

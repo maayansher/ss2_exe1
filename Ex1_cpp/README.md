@@ -25,9 +25,9 @@ Use the provided `makefile` to build and run the project:
 ### Run the project
 After compiling and building the wanted file:
 
-- To run the main
+- To run the demo
   ```bash
-  ./main
+  ./demo
   ```
 - To run the tests
   ```bash
@@ -44,7 +44,7 @@ To clean compiled files, run the command:
 
 `Algorithms.cpp` and `Algorithms.hpp` - implementation file and header file for graph algorithms.
 
-`main.cpp` - main file to show the cases of implmented algorithms.
+`demo.cpp` - demo file show the cases of implmented algorithms.
 
 `Test.cpp` - inside the test file we are checking different cases of each graph to show correctness and to detect fails. 
 

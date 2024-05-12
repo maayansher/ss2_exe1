@@ -56,7 +56,7 @@ namespace ariel {
       
 
     private:
-
+    //the following functions are algorithms to help us implement the main functions in the project
         static bool BFS(const Graph& graph, unsigned int start, vector<int>& color, unordered_set<unsigned int>& A, unordered_set<unsigned int>& B);
         
         static void DFS(const Graph& graph, unsigned int v, vector<bool>& visited);

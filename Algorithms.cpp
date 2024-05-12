@@ -11,20 +11,20 @@
 using namespace ariel;
 
 
-//do
+
 bool Algorithms::isConnected(Graph& graph) {
 
     vector<bool> visited(graph.size(), false);
     DFS(graph, 0, visited);
 
-    // we Check if all vertices was visited in the origin graph 
+    // check if all vertices was visited in the origin graph 
     for (bool vis : visited) {
         if (!vis){
             return false;// we find a vertex not visited so return false
         }
     }
-    //we transpose the graph and 
-    // we Check if all vertices was visited in the transpose graph 
+    //transpose the graph and 
+    // check if all vertices was visited in the transpose graph 
     graph.transpose();
     fill(visited.begin(), visited.end(), false); 
     DFS(graph, 0, visited);
@@ -32,17 +32,17 @@ bool Algorithms::isConnected(Graph& graph) {
     // Transpose to the origin grapb 
     graph.transpose();
 
-    // we Check if all vertices was visited in the transpose  graph
+    // check if all vertices was visited in the transpose  graph
     for (bool vis : visited) {
         if (!vis){
-            return false; // we find a vertex not visited so return false
+            return false; // find a vertex not visited so return false
         }
     }
 
     return true;
 }
 
-//do
+
 string Algorithms::shortestPath(const Graph& graph, const unsigned int s, const unsigned int end) {
 
     const unsigned int num_vertex = graph.size();
@@ -108,7 +108,7 @@ string Algorithms::shortestPath(const Graph& graph, const unsigned int s, const 
     return result_biparite_path;
 }
 
-//do
+
 string Algorithms::isContainsCycle(const Graph& graph) {
 
     const unsigned int num_vertex = graph.size(); 
@@ -145,7 +145,7 @@ string Algorithms::isContainsCycle(const Graph& graph) {
 }
 
 
-//do
+
 string Algorithms::isBipartite(const Graph& graph) {
 
     const unsigned int num_vertex = graph.size(); 
@@ -197,7 +197,7 @@ string Algorithms::isBipartite(const Graph& graph) {
     result_biparite.append("}.");
     return result_biparite;
 }
-//do
+
 
 string Algorithms::negativeCycle(const Graph& graph) {
 
@@ -213,7 +213,7 @@ string Algorithms::negativeCycle(const Graph& graph) {
     
     return "The graph not contains negative cycle";
 }
-//do
+
 
 void Algorithms::DFS(const Graph& graph, unsigned int vis, vector<bool>& visited) {
     visited[vis] = true;
@@ -229,7 +229,7 @@ void Algorithms::DFS(const Graph& graph, unsigned int vis, vector<bool>& visited
     }
 }
 
-//do
+
 bool Algorithms::DFS_Cycle(const unsigned int node, unsigned int parentNode, const Graph& graph, vector<bool>& visited, vector<unsigned int>& parent, string& result_biparite_cycle) {
 
     visited[node] = true;

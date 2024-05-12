@@ -55,14 +55,14 @@ To clean compiled files, run the command:
   
 `loadGraph` - Load a matrix to present a graph. The loadGraph supports square matrix only (otherwise throw error).
 
-`PrintGraph` - Print how many vertices and edges in the following graph.
+`printGraph` - Print how many vertices and edges in the following graph.
 
 - Algorithms functions:
   
 
 `isConnected` - Determine if the graph is strongly connected, which means theres a path between each 2 vertices.
 
-`shortestPath` - Finding the shortest path between any 2 vertices.
+`shortestPath` - Finding the shortest path between any 2 vertices using the Bellman-ford algorithms, since the function can get a graph with negative weights as well.
 
 `isContainsCycle` - Checks if the graph contains a cycle in it, if so, return the vertices who build the cycle.
 

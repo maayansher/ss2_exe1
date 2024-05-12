@@ -2,7 +2,6 @@
 #id: 208731091
 #Email: maayan1sher@gmail.com
 
-#!make -f
 
 CXX=g++
 CXXFLAGS=-std=c++11 -Werror -Wsign-conversion

@@ -23,7 +23,7 @@ TEST_CASE("ALL FUNCTIONS")
     CHECK(ariel::Algorithms::shortestPath(g, 0, 2) == "0->1->2");
     CHECK(ariel::Algorithms::isContainsCycle(g) == "0");
     CHECK(ariel::Algorithms::isBipartite(g) == "The graph is bipartite: color1={0, 2}, color2={1, 3}.");
-  //  CHECK(ariel::Algorithms::negativeCycle(g) == "The graph contains negative cycle");
+    CHECK(ariel::Algorithms::negativeCycle(g) == "The graph not contains negative cycle");
     CHECK(ariel::Algorithms::shortestPath(g, 1, 2) == "1->2");
 }
 

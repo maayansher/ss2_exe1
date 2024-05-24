@@ -1,12 +1,12 @@
 # ss2_exe1
-# Descrtiption:
+## Descrtiption:
 The following project implementing an algorithms for graph analysis such as: find the shortest path,detecting cycles,
 check if theres negative cycle, check if the graph is connected and check if a graph is bipartite.
 
 The algorithms supports weighted/unweighted graphs and also directed/undirected graphs.
 Noted that the algorithms accpets adjacency matrix only means it can only get square matrix as input.
 
-# How to run the project
+## How to run the project
 Use the provided `makefile` to build and run the project:
     
    - To build main:
@@ -56,6 +56,14 @@ To clean compiled files, run the command:
 `loadGraph` - Load a matrix to present a graph. The loadGraph supports square matrix only (otherwise throw error).
 
 `printGraph` - Print how many vertices and edges in the following graph.
+
+`size` - Return the number of vertices in the graph.
+
+`getEdge` - Return the weight of the edge between two vertices.
+
+`getAllVertices` - Return all vertices that connected to a specific vertex.
+
+`transpose` - Transpose the graph by swapping the row and columns of the matrix.
 
 - Algorithms functions:
   

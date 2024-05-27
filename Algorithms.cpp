@@ -116,24 +116,24 @@ string Algorithms::isContainsCycle(const Graph& graph) {
 
     vector<unsigned int> pred(num_vertex, INT_MAX);
 
-    string result_biparite_cycle = "";
+    string result_cycle = "";
 
     for (unsigned int i = 0; i < num_vertex; i++) {
         if (!visited[i]) {
-            if (DFS_Cycle(i, INT_MAX, graph, visited, pred, result_biparite_cycle)) {
+            if (DFS_Cycle(i, INT_MAX, graph, visited, pred, result_cycle)) {
 
                 unsigned int count = 0;
-                for (const char ch : result_biparite_cycle) {
+                for (const char ch : result_cycle) {
                     if (ch == '>') {
                         count++;
                     }
                 }
                 if (count>= 2) {
-                    return result_biparite_cycle;
+                    return result_cycle;
                 }
 
                 else {
-                    result_biparite_cycle = "";
+                    result_cycle = "";
                     fill(visited.begin(), visited.end(), false);
                 }
             }

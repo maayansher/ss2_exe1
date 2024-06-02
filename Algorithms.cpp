@@ -92,20 +92,20 @@ string Algorithms::shortestPath(const Graph& graph, const unsigned int s, const 
         }
     }
 
-    // check if we found result_biparite_path
+    // check if we found result_path
     if (distance[static_cast<unsigned int>(end)] == INT_MAX) {
         return "-1";
     }
 
   
-    string result_biparite_path = to_string(end);
+    string result_path = to_string(end);
 
     for (unsigned int n = end; n != s; n = static_cast<unsigned int>(pred[n])) {
-        result_biparite_path.insert(0, "->");
-        result_biparite_path.insert(0, to_string(pred[n]));
+        result_path.insert(0, "->");
+        result_path.insert(0, to_string(pred[n]));
     }
 
-    return result_biparite_path;
+    return result_path;
 }
 
 
@@ -230,7 +230,7 @@ void Algorithms::DFS(const Graph& graph, unsigned int vis, vector<bool>& visited
 }
 
 
-bool Algorithms::DFS_Cycle(const unsigned int node, unsigned int parentNode, const Graph& graph, vector<bool>& visited, vector<unsigned int>& parent, string& result_biparite_cycle) {
+bool Algorithms::DFS_Cycle(const unsigned int node, unsigned int parentNode, const Graph& graph, vector<bool>& visited, vector<unsigned int>& parent, string& result_cycle) {
 
     visited[node] = true;
     parent[node] = parentNode; 
@@ -239,7 +239,7 @@ bool Algorithms::DFS_Cycle(const unsigned int node, unsigned int parentNode, con
     for (const unsigned int i :all_vertices) {
 
         if (!visited[i]) {
-            if (DFS_Cycle(i, node, graph, visited, parent, result_biparite_cycle)) {
+            if (DFS_Cycle(i, node, graph, visited, parent, result_cycle)) {
                 return true; 
             }
         }
@@ -247,14 +247,14 @@ bool Algorithms::DFS_Cycle(const unsigned int node, unsigned int parentNode, con
         else if (i != parentNode) {
 
             unsigned int n = node;
-            result_biparite_cycle = "The cycle is: " + to_string(i); 
+            result_cycle = "The cycle is: " + to_string(i); 
             
             while (n != INT_MAX && n != i) {
-                result_biparite_cycle += "->" + std::to_string(n); 
+                result_cycle += "->" + std::to_string(n); 
                 n = parent[n];
             }
 
-            result_biparite_cycle += "->" + to_string(i); 
+            result_cycle += "->" + to_string(i); 
 
             return true;
         }
@@ -326,4 +326,3 @@ bool Algorithms::BFS(const Graph& graph, const unsigned int s, vector<int>& vec_
 
     return true; 
 }
-
